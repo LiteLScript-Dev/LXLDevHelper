@@ -1,0 +1,124 @@
+{
+  "ClassName": "Block",
+  "AllFunc": [
+    {
+      "Description": "获取方块对应的NBT对象",
+      "FuncName": "getNbt",
+      "ReturnDescription": "方块的NBT对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "NbtCompound"
+    },
+    {
+      "Description": "写入方块对应的NBT对象",
+      "FuncName": "setNbt",
+      "ReturnDescription": "是否成功写入",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "NBT对象",
+          "ParamType": "NbtCompound",
+          "ParamName": "nbt",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取方块的BlockState\r\n方便函数，协助解析方块BlockState并转换为Object，方便读取与解析\r\n等价于脚本执行block.getNbt().getTag(\"states\").toObject()",
+      "FuncName": "getBlockState",
+      "ReturnDescription": "方块的BlockState",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Object"
+    },
+    {
+      "Description": "写入方块对应的NBT对象",
+      "FuncName": "setNbt",
+      "ReturnDescription": "是否成功写入",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "NBT对象",
+          "ParamType": "NbtCompound",
+          "ParamName": "nbt",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "判断方块是否拥有容器",
+      "FuncName": "hasContainer",
+      "ReturnDescription": "这个方块是否拥有容器",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取方块所拥有的容器对象",
+      "FuncName": "getContainer",
+      "ReturnDescription": "这个方块所拥有的容器对象",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Container"
+    },
+    {
+      "Description": "判断方块是否拥有方块实体",
+      "FuncName": "hasBlockEntity",
+      "ReturnDescription": "这个方块是否拥有方块实体",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取方块所拥有的方块实体",
+      "FuncName": "getBlockEntity",
+      "ReturnDescription": "这个方块所拥有的方块实体",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "BlockEntity"
+    },
+    {
+      "Description": "删除方块所拥有的方块实体",
+      "FuncName": "removeBlockEntity",
+      "ReturnDescription": "是否成功删除",
+      "IsStatic": false,
+      "Params": [],
+      "ReturnType": "Boolean"
+    }
+  ],
+  "AllProperty": [
+    {
+      "PropertyName": "name",
+      "Description": "游戏内显示的方块名称",
+      "PropertyType": "String",
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "type",
+      "Description": "方块标准类型名\t",
+      "PropertyType": "String",
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "id",
+      "Description": "方块的游戏内id",
+      "PropertyType": "Integer",
+      "IsReadonly": true,
+      "IsStatic": false
+    },
+    {
+      "PropertyName": "pos",
+      "Description": "方块所在坐标",
+      "PropertyType": "IntPos",
+      "IsReadonly": true,
+      "IsStatic": false
+    }
+  ],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "方块对象"
+}

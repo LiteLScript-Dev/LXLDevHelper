@@ -1,0 +1,76 @@
+﻿<Page x:Class="InterfaceManager.ApiPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:InterfaceManager="clr-namespace:InterfaceManager.Layout"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      Background="{DynamicResource MaterialDesignPaper}"
+      TextElement.FontSize="14"
+      FontFamily="{materialDesign:MaterialDesignFont}"
+      mc:Ignorable="d"            
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ApiPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock
+                Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                Text="接口列表" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"/>
+            </StackPanel>
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <TreeView Name="treeView" >
+                    <TreeView.ItemTemplate>
+                        <HierarchicalDataTemplate DataType="{x:Type InterfaceManager:PropertyNodeItem}" ItemsSource="{Binding Path=Children}">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding DisplayName}"/>
+                                <StackPanel.ToolTip>
+                                    <TextBlock Text="{Binding Name}"/>
+                                </StackPanel.ToolTip>
+                            </StackPanel>
+                        </HierarchicalDataTemplate>
+                    </TreeView.ItemTemplate>
+                </TreeView>
+            </ScrollViewer>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ToggleButton
+                    Content="+"
+                    Grid.Column="0"
+                    FontSize="25"
+                    Style="{StaticResource MaterialDesignActionLightToggleButton}"
+                    ToolTip="添加"/>
+                <ToggleButton
+                    Content="R"
+                    Grid.Column="1"
+                    FontSize="15"
+                    Style="{StaticResource MaterialDesignActionLightToggleButton}"
+                    ToolTip="重命名"/>
+                <ToggleButton
+                    Content="-"
+                    Grid.Column="2"
+                    FontSize="25"
+                    Style="{StaticResource MaterialDesignActionLightToggleButton}"
+                    ToolTip="删除"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+        </Grid>
+    </Grid>
+</Page>

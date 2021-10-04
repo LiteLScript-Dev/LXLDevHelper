@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceManager", "InterfaceManager\InterfaceManager.csproj", "{C389CEE3-4D99-49BF-BED8-E72798819560}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dat", "Dat", "{0EE59A81-FCD2-4E78-AA89-0A24474114D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C389CEE3-4D99-49BF-BED8-E72798819560}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C389CEE3-4D99-49BF-BED8-E72798819560}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C389CEE3-4D99-49BF-BED8-E72798819560}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C389CEE3-4D99-49BF-BED8-E72798819560}.Debug|x64.Build.0 = Debug|Any CPU
+		{C389CEE3-4D99-49BF-BED8-E72798819560}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C389CEE3-4D99-49BF-BED8-E72798819560}.Debug|x86.Build.0 = Debug|Any CPU
+		{C389CEE3-4D99-49BF-BED8-E72798819560}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C389CEE3-4D99-49BF-BED8-E72798819560}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C389CEE3-4D99-49BF-BED8-E72798819560}.Release|x64.ActiveCfg = Release|Any CPU
+		{C389CEE3-4D99-49BF-BED8-E72798819560}.Release|x64.Build.0 = Release|Any CPU
+		{C389CEE3-4D99-49BF-BED8-E72798819560}.Release|x86.ActiveCfg = Release|Any CPU
+		{C389CEE3-4D99-49BF-BED8-E72798819560}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE7DE5FC-D026-4B6A-B9F5-7DF014EDA7C3}
+	EndGlobalSection
+EndGlobal

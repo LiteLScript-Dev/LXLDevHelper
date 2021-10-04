@@ -1,0 +1,283 @@
+{
+  "ClassName": "file",
+  "AllFunc": [
+    {
+      "Description": "读入文件的所有内容",
+      "FuncName": "readFrom",
+      "ReturnDescription": "文件的所有数据\r\n如返回值为 Null 则表示读取失败",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "目标文件的路径，相对路径以BDS根目录为基准",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "String"
+    },
+    {
+      "Description": "向指定文件写入内容",
+      "FuncName": "writeTo",
+      "ReturnDescription": "是否写入成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "目标文件的路径，相对路径以BDS根目录为基准",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的内容",
+          "ParamType": "String",
+          "ParamName": "text",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "向指定文件追加一行",
+      "FuncName": "writeLine",
+      "ReturnDescription": "是否写入成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "目标文件的路径，相对路径以BDS根目录为基准",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        },
+        {
+          "Description": "要写入的内容",
+          "ParamType": "String",
+          "ParamName": "text",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取一个文件对象",
+      "FuncName": "open",
+      "ReturnDescription": "打开的文件对象\r\n如返回值为 Null 则表示打开失败",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "想要打开的文件路径",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        },
+        {
+          "Description": "文件的打开模式",
+          "ParamType": "Any",
+          "ParamName": "mode",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）是否以二进制模式打开文件，默认为false",
+          "ParamType": "Boolean",
+          "ParamName": "isBinary",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "File"
+    },
+    {
+      "Description": "创建文件夹",
+      "FuncName": "createDir",
+      "ReturnDescription": "是否成功创建",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "目标文件夹的路径。可以直接创建多层，不需要逐层创建",
+          "ParamType": "String",
+          "ParamName": "dir",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "创建文件夹",
+      "FuncName": "mkdir",
+      "ReturnDescription": "是否成功创建",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "目标文件夹的路径。可以直接创建多层，不需要逐层创建",
+          "ParamType": "String",
+          "ParamName": "dir",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "判断文件 / 文件夹是否存在",
+      "FuncName": "exists",
+      "ReturnDescription": "目标是否存在",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "目标文件 / 文件夹的路径",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "复制文件 / 文件夹到指定位置",
+      "FuncName": "copy",
+      "ReturnDescription": "是否复制成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "源文件 / 文件夹的路径",
+          "ParamType": "String",
+          "ParamName": "from",
+          "Optional": false
+        },
+        {
+          "Description": "目标文件 / 文件夹的位置",
+          "ParamType": "String",
+          "ParamName": "to",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "移动文件 / 文件夹到指定位置",
+      "FuncName": "move",
+      "ReturnDescription": "是否复制成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "源文件 / 文件夹的路径",
+          "ParamType": "String",
+          "ParamName": "from",
+          "Optional": false
+        },
+        {
+          "Description": "目标文件 / 文件夹的位置",
+          "ParamType": "String",
+          "ParamName": "to",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "重命名指定文件 / 文件夹",
+      "FuncName": "rename",
+      "ReturnDescription": "是否复制成功",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "文件 / 文件夹的旧名字",
+          "ParamType": "String",
+          "ParamName": "old",
+          "Optional": false
+        },
+        {
+          "Description": "新名字",
+          "ParamType": "String",
+          "ParamName": "new",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取指定文件的大小",
+      "FuncName": "getFileSize",
+      "ReturnDescription": "文件的大小（字节）",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "所操作的文件路径",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "判断指定路径是否是文件夹",
+      "FuncName": "checkIsDir",
+      "ReturnDescription": "目标路径是否是文件夹",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "所判断的路径",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "列出指定文件夹下的所有文件 / 文件夹",
+      "FuncName": "getFilesList",
+      "ReturnDescription": "文件名、文件夹名数组",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "文件夹路径",
+          "ParamType": "String",
+          "ParamName": "dir",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Array@String"
+    },
+    {
+      "Description": "删除文件 / 文件夹",
+      "FuncName": "delete",
+      "ReturnDescription": "是否成功删除",
+      "IsStatic": true,
+      "Params": [
+        {
+          "Description": "目标文件 / 文件夹的路径",
+          "ParamType": "String",
+          "ParamName": "path",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    }
+  ],
+  "AllProperty": [
+    {
+      "PropertyName": "readMode",
+      "Description": "准备读取文件内容",
+      "PropertyType": "Any",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "writeMode",
+      "Description": "准备写入文件。如果文件已存在，会被清空",
+      "PropertyType": "Any",
+      "IsReadonly": false,
+      "IsStatic": true
+    },
+    {
+      "PropertyName": "appendMode",
+      "Description": "准备写入文件。之后写入的任何内容都将会被追加到文件最后",
+      "PropertyType": "Any",
+      "IsReadonly": false,
+      "IsStatic": true
+    }
+  ],
+  "IsStatic": true,
+  "IsInterface": false,
+  "Description": "📝 简单文件读写 API"
+}

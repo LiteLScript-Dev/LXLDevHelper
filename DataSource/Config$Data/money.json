@@ -1,0 +1,162 @@
+{
+  "ClassName": "money",
+  "AllFunc": [
+    {
+      "Description": "设置玩家的存款金额",
+      "FuncName": "set",
+      "ReturnDescription": "是否设置成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的玩家的Xuid标识符",
+          "ParamType": "String",
+          "ParamName": "xuid",
+          "Optional": false
+        },
+        {
+          "Description": "要设置的金额",
+          "ParamType": "Integer",
+          "ParamName": "money",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "获取玩家的存款金额",
+      "FuncName": "get",
+      "ReturnDescription": "玩家的资金数值",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的玩家的Xuid标识符",
+          "ParamType": "String",
+          "ParamName": "xuid",
+          "Optional": false
+        },
+        {
+          "Description": "玩家的资金数值",
+          "ParamType": "Integer",
+          "ParamName": "money",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Integer"
+    },
+    {
+      "Description": "增加玩家的存款",
+      "FuncName": "add",
+      "ReturnDescription": "是否设置成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的玩家的Xuid标识符",
+          "ParamType": "String",
+          "ParamName": "xuid",
+          "Optional": false
+        },
+        {
+          "Description": "要增加的金额",
+          "ParamType": "Integer",
+          "ParamName": "money",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "减少玩家的存款",
+      "FuncName": "reduce",
+      "ReturnDescription": "是否设置成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的玩家的Xuid标识符",
+          "ParamType": "String",
+          "ParamName": "xuid",
+          "Optional": false
+        },
+        {
+          "Description": "要减小的金额",
+          "ParamType": "Integer",
+          "ParamName": "money",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "进行一笔转账",
+      "FuncName": "trans",
+      "ReturnDescription": "是否转账成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "付款的玩家的Xuid标识符",
+          "ParamType": "String",
+          "ParamName": "xuid_plf",
+          "Optional": false
+        },
+        {
+          "Description": "收款的玩家的Xuid标识符",
+          "ParamType": "String",
+          "ParamName": "xuid_pl2",
+          "Optional": false
+        },
+        {
+          "Description": "要支付的金额",
+          "ParamType": "Integer",
+          "ParamName": "money",
+          "Optional": false
+        },
+        {
+          "Description": "（可选参数）给这笔转账附加一些文字说明",
+          "ParamType": "String",
+          "ParamName": "node",
+          "Optional": true
+        }
+      ],
+      "ReturnType": "Boolean"
+    },
+    {
+      "Description": "查询历史账单",
+      "FuncName": "getHistory",
+      "ReturnDescription": "查询结果对象的数组",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "要操作的玩家的Xuid标识符",
+          "ParamType": "String",
+          "ParamName": "xuid",
+          "Optional": false
+        },
+        {
+          "Description": "查询从现在开始往前time秒的记录",
+          "ParamType": "Integer",
+          "ParamName": "time",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Array@ObjectTransHistory"
+    },
+    {
+      "Description": "删除账单历史记录",
+      "FuncName": "clearHistory",
+      "ReturnDescription": "是否删除成功",
+      "IsStatic": false,
+      "Params": [
+        {
+          "Description": "删除从现在开始往前time秒的记录",
+          "ParamType": "Integer",
+          "ParamName": "time",
+          "Optional": false
+        }
+      ],
+      "ReturnType": "Boolean"
+    }
+  ],
+  "AllProperty": [],
+  "IsStatic": false,
+  "IsInterface": false,
+  "Description": "💰 经济系统 API"
+}
