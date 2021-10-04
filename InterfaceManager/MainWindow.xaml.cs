@@ -22,11 +22,13 @@ namespace InterfaceManager
     public partial class MainWindow : Window
     {
         private bool isLight = true;
-        private ApiPage apiPage = null;
+        private InterfaceEditor interfaceEditor = null;
+        private Converter converter = null;
+
         public MainWindow()
         {
            InitializeComponent();
-            Home home = new Home();
+            HomeStatus home = new HomeStatus();
             MainPage.Content = home;
             home.refreshData();
         }
@@ -75,24 +77,36 @@ namespace InterfaceManager
         //Home Page
         private void Home_Click(object sender,RoutedEventArgs e)
         {
-            Home home = new Home();
+            HomeStatus home = new HomeStatus();
             MainPage.Content = home;
             home.refreshData();
         }
         //Manage Page
         private void Manage_Click(object sender, RoutedEventArgs e)
         {
-            if (apiPage == null)
+            if (interfaceEditor == null)
             {
-                ApiPage apiPage = new ApiPage();
-                this.apiPage = apiPage;
-                MainPage.Content = apiPage;
+                InterfaceEditor interfaceEditor = new InterfaceEditor();
+                this.interfaceEditor = interfaceEditor;
+                MainPage.Content = interfaceEditor;
             }
             else
             {
-                MainPage.Content = apiPage;
+                MainPage.Content = interfaceEditor;
             }
         }
 
+        private void Converter_Click(object sender, RoutedEventArgs e)
+        {
+            if (converter == null) {
+                Converter converter = new Converter();
+                this.converter = converter;
+                MainPage.Content = converter;
+            }
+            else
+            {
+                MainPage.Content = converter;
+            }
+        }
     }
 }

@@ -119,7 +119,7 @@
                                     <!--Adding Menu buttons-->
                                     <Button Grid.Row="0" Background="Transparent" BorderThickness="0" Style="{DynamicResource menuButtonTemplate}" Click="Home_Click" ToolTip="首页" Content="{materialDesign:PackIcon home, Size=30}" Foreground="{DynamicResource MaterialDesignBody}"/>
                                     <Button Grid.Row="1" Background="Transparent" BorderThickness="0" Style="{DynamicResource menuButtonTemplate}" Click="Manage_Click" ToolTip="接口管理" Content="{materialDesign:PackIcon FormatListBulletedSquare, Size=30}"  Foreground="{DynamicResource MaterialDesignBody}"/>
-                                    <Button Grid.Row="2" Background="Transparent" BorderThickness="0" Style="{DynamicResource menuButtonTemplate}" ToolTip="Home" Content="{materialDesign:PackIcon home, Size=30}" Foreground="{DynamicResource MaterialDesignBody}"/>
+                                    <Button Grid.Row="2" Background="Transparent" BorderThickness="0" Style="{DynamicResource menuButtonTemplate}" ToolTip="Home" Content="{materialDesign:PackIcon ArrowLeftRight, Size=30}" Foreground="{DynamicResource MaterialDesignBody}" Click="Converter_Click"/>
 
                                     <Button Grid.Row="3" Background="Transparent" BorderThickness="0" Style="{DynamicResource menuButtonTemplate}" ToolTip="Home" Content="{materialDesign:PackIcon home, Size=30}" Foreground="{DynamicResource MaterialDesignBody}"/>
 

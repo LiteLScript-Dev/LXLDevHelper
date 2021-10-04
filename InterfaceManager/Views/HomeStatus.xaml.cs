@@ -19,10 +19,10 @@ namespace InterfaceManager
     /// <summary>
     /// Home.xaml 的交互逻辑
     /// </summary>
-    public partial class Home : Page
+    public partial class HomeStatus : Page
     {
         private string LibraryDownloadLink = null;
-        public Home()
+        public HomeStatus()
         {
             InitializeComponent();
             refreshData();

@@ -22,10 +22,10 @@ namespace InterfaceManager
     /// <summary>
     /// ApiPage.xaml 的交互逻辑
     /// </summary>
-    public partial class ApiPage : Page
+    public partial class InterfaceEditor : Page
     {
 
-        public ApiPage()
+        public InterfaceEditor()
         {
             InitializeComponent();
             refdata();
